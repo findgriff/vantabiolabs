@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const BRAND = "VantaBio Labs";
 
 export default function Home() {
@@ -6,17 +8,12 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold">
-              V
-            </div>
-            <div>
-              <p className="text-sm font-semibold tracking-wide">{BRAND}</p>
-              <p className="text-xs text-slate-500">Research Compounds</p>
-            </div>
+            <Image src="/assets/logo.svg" alt={BRAND} width={180} height={48} className="h-10 w-auto" />
           </div>
           <div className="hidden items-center gap-4 text-sm text-slate-600 md:flex">
-            <a href="#proof" className="hover:text-emerald-700">Proof</a>
-            <a href="#protocol" className="hover:text-emerald-700">Protocol</a>
+            <a href="#about" className="hover:text-emerald-700">Overview</a>
+            <a href="#spec" className="hover:text-emerald-700">Specifications</a>
+            <a href="#order" className="hover:text-emerald-700">Order</a>
             <a href="#faq" className="hover:text-emerald-700">FAQ</a>
           </div>
           <a
@@ -30,17 +27,18 @@ export default function Home() {
 
       <main>
         <section className="px-6 pt-16 pb-12" id="top">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                Retatutride Research Supply
+                Retatutride — Research Supply
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
-                A focused, premium source for Retatutride — verified, documented, and ready for research
+                A clean, premium source for Retatutride with verified documentation and controlled
+                distribution
               </h1>
               <p className="mt-5 text-lg text-slate-600">
-                Built for labs that value clarity: batch-level documentation, transparent sourcing, and
-                consistent standards. One compound. Zero clutter.
+                One compound. No clutter. Designed for laboratories that value clarity, provenance,
+                and dependable standards.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -50,27 +48,31 @@ export default function Home() {
                   Request pricing
                 </a>
                 <a
-                  href="#proof"
+                  href="#spec"
                   className="rounded-full border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-700"
                 >
-                  See quality standards
+                  View specifications
                 </a>
               </div>
               <div className="mt-8 grid gap-3 text-xs text-slate-500 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 p-3">COA-backed batches</div>
-                <div className="rounded-2xl border border-slate-200 p-3">HPLC + MS verification</div>
-                <div className="rounded-2xl border border-slate-200 p-3">Cold-chain dispatch</div>
-                <div className="rounded-2xl border border-slate-200 p-3">EU & UK delivery</div>
+                <div className="rounded-2xl border border-slate-200 p-3">HPLC + MS testing</div>
+                <div className="rounded-2xl border border-slate-200 p-3">Cold-chain delivery</div>
+                <div className="rounded-2xl border border-slate-200 p-3">Batch traceability</div>
               </div>
               <p className="mt-6 text-xs text-slate-500">
                 For laboratory research only. Not for human or veterinary use.
               </p>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-white p-8 shadow-sm">
+            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-white shadow-md">
-                <div className="absolute inset-0 grid place-items-center text-sm text-slate-400">
-                  Product image placeholder
-                </div>
+                <Image
+                  src="/assets/hero-lab.jpg"
+                  alt="Laboratory environment"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
               </div>
               <div className="mt-6 grid gap-3 text-xs text-slate-500">
                 <div className="flex items-center justify-between">
@@ -82,58 +84,93 @@ export default function Home() {
                   <span>2–8°C recommended</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>Documentation</span>
-                  <span>Batch COA + analysis</span>
+                  <span>Docs</span>
+                  <span>COA + analytics</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="proof" className="px-6 py-16">
-          <div className="mx-auto max-w-6xl rounded-3xl bg-slate-900 px-8 py-12 text-white">
-            <h2 className="text-3xl font-semibold">Quality you can verify</h2>
-            <p className="mt-4 text-slate-300">
-              Every batch is supported by analytical documentation and verified purity targets, with
-              transparent sourcing and traceable chain-of-custody.
-            </p>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {[
-                { value: "≥99%", label: "Target purity threshold" },
-                { value: "2x", label: "Independent verification" },
-                { value: "24/7", label: "Cold-chain tracking" },
-              ].map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-3xl font-semibold text-emerald-300">{stat.value}</p>
-                  <p className="mt-2 text-sm text-slate-300">{stat.label}</p>
-                </div>
-              ))}
+        <section id="about" className="px-6 py-16">
+          <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1.1fr]">
+            <div className="relative overflow-hidden rounded-3xl border border-slate-200">
+              <Image
+                src="/assets/lab-bottles.jpg"
+                alt="Lab bottles"
+                width={800}
+                height={600}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-semibold">Precision for research environments</h2>
+              <p className="mt-4 text-slate-600">
+                Retatutride is an investigational compound being studied for multi-pathway activity in
+                metabolic research models. We supply research-grade material with consistent standards,
+                batch documentation, and controlled chain-of-custody.
+              </p>
+              <div className="mt-6 grid gap-4">
+                {[
+                  "Transparent sourcing & provenance",
+                  "Batch-level documentation",
+                  "Independent analytical verification",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-600">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="protocol" className="px-6 py-16">
+        <section id="spec" className="px-6 py-16">
+          <div className="mx-auto max-w-6xl rounded-3xl bg-slate-900 px-8 py-12 text-white">
+            <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <h2 className="text-3xl font-semibold">Specification highlights</h2>
+                <p className="mt-4 text-slate-300">
+                  Each batch is released with COA documentation and verified purity targets.
+                </p>
+                <div className="mt-8 grid gap-6 md:grid-cols-3">
+                  {[
+                    { value: "≥99%", label: "Target purity" },
+                    { value: "HPLC", label: "Chromatography" },
+                    { value: "MS", label: "Mass spec" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                      <p className="text-3xl font-semibold text-emerald-300">{stat.value}</p>
+                      <p className="mt-2 text-sm text-slate-300">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="text-lg font-semibold">Documentation included</h3>
+                <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                  <li>• Certificate of Analysis (COA)</li>
+                  <li>• Batch ID and release date</li>
+                  <li>• Stability notes</li>
+                  <li>• Storage and handling guidance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="order" className="px-6 py-16">
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <h2 className="text-3xl font-semibold">A simple procurement flow</h2>
+              <h2 className="text-3xl font-semibold">Request access & pricing</h2>
               <p className="mt-4 text-slate-600">
-                We keep ordering streamlined and compliance-first: request access, receive batch data,
-                and confirm your research requirements.
+                Submit your lab details to receive pricing, available batch sizes, and delivery options.
               </p>
               <div className="mt-6 grid gap-4">
                 {[
-                  {
-                    title: "1. Request access",
-                    text: "Tell us your lab details and required quantity.",
-                  },
-                  {
-                    title: "2. Review batch documentation",
-                    text: "We provide COA + analytical results for approval.",
-                  },
-                  {
-                    title: "3. Secure dispatch",
-                    text: "Cold-chain packaging with tracking and delivery updates.",
-                  },
+                  { title: "1. Request access", text: "Tell us your lab details and quantities." },
+                  { title: "2. Review documentation", text: "We provide COA and analytical results." },
+                  { title: "3. Secure dispatch", text: "Cold-chain delivery with tracking." },
                 ].map((step) => (
                   <div key={step.title} className="rounded-2xl border border-slate-200 p-5">
                     <h3 className="text-base font-semibold">{step.title}</h3>
@@ -142,7 +179,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" id="order">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-slate-500">Retatutride (research grade)</p>
