@@ -10,12 +10,13 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image src="/assets/logo.svg" alt={BRAND} width={180} height={48} className="h-10 w-auto" />
           </div>
-          <div className="hidden items-center gap-4 text-sm text-slate-600 md:flex">
-            <a href="#about" className="hover:text-emerald-700">Overview</a>
-            <a href="#spec" className="hover:text-emerald-700">Specifications</a>
+          <nav className="hidden items-center gap-5 text-sm text-slate-600 md:flex">
+            <a href="#mission" className="hover:text-emerald-700">Mission</a>
+            <a href="#compound" className="hover:text-emerald-700">Compound</a>
+            <a href="#quality" className="hover:text-emerald-700">Quality</a>
             <a href="#order" className="hover:text-emerald-700">Order</a>
             <a href="#faq" className="hover:text-emerald-700">FAQ</a>
-          </div>
+          </nav>
           <a
             href="#order"
             className="rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30"
@@ -27,18 +28,17 @@ export default function Home() {
 
       <main>
         <section className="px-6 pt-16 pb-12" id="top">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                Retatutride — Research Supply
+                Retatutride Research Supply
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
-                A clean, premium source for Retatutride with verified documentation and controlled
-                distribution
+                One-compound focus. Research-grade clarity.
               </h1>
               <p className="mt-5 text-lg text-slate-600">
-                One compound. No clutter. Designed for laboratories that value clarity, provenance,
-                and dependable standards.
+                Retatutride supplied for laboratory and analytical use only. We prioritize verified
+                documentation, controlled distribution, and a clean procurement flow.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -48,16 +48,16 @@ export default function Home() {
                   Request pricing
                 </a>
                 <a
-                  href="#spec"
+                  href="#quality"
                   className="rounded-full border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-700"
                 >
-                  View specifications
+                  View COA standards
                 </a>
               </div>
               <div className="mt-8 grid gap-3 text-xs text-slate-500 sm:grid-cols-2">
                 <div className="rounded-2xl border border-slate-200 p-3">COA-backed batches</div>
                 <div className="rounded-2xl border border-slate-200 p-3">HPLC + MS testing</div>
-                <div className="rounded-2xl border border-slate-200 p-3">Cold-chain delivery</div>
+                <div className="rounded-2xl border border-slate-200 p-3">Cold-chain dispatch</div>
                 <div className="rounded-2xl border border-slate-200 p-3">Batch traceability</div>
               </div>
               <p className="mt-6 text-xs text-slate-500">
@@ -92,29 +92,61 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="px-6 py-16">
+        <section id="mission" className="px-6 py-16">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="text-3xl font-semibold">Our mission</h2>
+            <p className="mt-4 text-slate-600">
+              We advance scientific exploration by supplying high-purity research compounds with
+              transparent sourcing, verified purity, and clear documentation.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  title: "Expert collaboration",
+                  text: "Built with lab professionals to keep protocols efficient and compliant.",
+                },
+                {
+                  title: "Focused catalog",
+                  text: "One compound, one standard. No clutter or distractions.",
+                },
+                {
+                  title: "Individual support",
+                  text: "Guidance on documentation, shipping, and batch specifics.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-2xl border border-slate-200 p-6">
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-3 text-sm text-slate-600">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="compound" className="px-6 py-16">
           <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1.1fr]">
             <div className="relative overflow-hidden rounded-3xl border border-slate-200">
               <Image
                 src="/assets/lab-bottles.jpg"
                 alt="Lab bottles"
-                width={800}
-                height={600}
+                width={900}
+                height={700}
                 className="h-full w-full object-cover"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-semibold">Precision for research environments</h2>
+              <h2 className="text-3xl font-semibold">Retatutride overview</h2>
               <p className="mt-4 text-slate-600">
-                Retatutride is an investigational compound being studied for multi-pathway activity in
-                metabolic research models. We supply research-grade material with consistent standards,
-                batch documentation, and controlled chain-of-custody.
+                Retatutride is an investigational compound being studied for multi-receptor activity in
+                metabolic research models. We supply research-grade material with batch documentation
+                and controlled chain-of-custody.
               </p>
               <div className="mt-6 grid gap-4">
                 {[
                   "Transparent sourcing & provenance",
                   "Batch-level documentation",
                   "Independent analytical verification",
+                  "Cold-chain handling",
                 ].map((item) => (
                   <div key={item} className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-600">
                     {item}
@@ -125,13 +157,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="spec" className="px-6 py-16">
+        <section id="quality" className="px-6 py-16">
           <div className="mx-auto max-w-6xl rounded-3xl bg-slate-900 px-8 py-12 text-white">
             <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
               <div>
-                <h2 className="text-3xl font-semibold">Specification highlights</h2>
+                <h2 className="text-3xl font-semibold">Quality you can verify</h2>
                 <p className="mt-4 text-slate-300">
-                  Each batch is released with COA documentation and verified purity targets.
+                  Each batch ships with COA documentation and analytical verification using HPLC and
+                  mass spectrometry.
                 </p>
                 <div className="mt-8 grid gap-6 md:grid-cols-3">
                   {[
