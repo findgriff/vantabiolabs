@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const BRAND = "VantaBio Labs";
 
 export default function Home() {
@@ -17,58 +15,52 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden items-center gap-4 text-sm text-slate-600 md:flex">
-            <a href="#science" className="hover:text-emerald-700">Science</a>
-            <a href="#quality" className="hover:text-emerald-700">Quality</a>
+            <a href="#proof" className="hover:text-emerald-700">Proof</a>
+            <a href="#protocol" className="hover:text-emerald-700">Protocol</a>
             <a href="#faq" className="hover:text-emerald-700">FAQ</a>
           </div>
           <a
             href="#order"
             className="rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30"
           >
-            Order Retatutride
+            Request access
           </a>
         </div>
       </header>
 
       <main>
         <section className="px-6 pt-16 pb-12" id="top">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                High-Purity Research Compound
+                Retatutride Research Supply
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
-                Retatutride — premium research-grade supply with verified purity
+                A focused, premium source for Retatutride — verified, documented, and ready for research
               </h1>
               <p className="mt-5 text-lg text-slate-600">
-                Designed for laboratories and research professionals. Full transparency, batch tracking,
-                and COA-backed quality for investigative use only.
+                Built for labs that value clarity: batch-level documentation, transparent sourcing, and
+                consistent standards. One compound. Zero clutter.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#order"
                   className="rounded-full bg-emerald-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-emerald-600/30"
                 >
-                  Order Retatutride
+                  Request pricing
                 </a>
                 <a
-                  href="#quality"
+                  href="#proof"
                   className="rounded-full border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-700"
                 >
-                  View COA standards
+                  See quality standards
                 </a>
               </div>
-              <div className="mt-8 flex flex-wrap gap-3 text-xs text-slate-500">
-                {[
-                  "≥99% purity targets",
-                  "HPLC & MS testing",
-                  "Cold-chain dispatch",
-                  "Batch traceability",
-                ].map((badge) => (
-                  <span key={badge} className="rounded-full border border-slate-200 px-3 py-1">
-                    {badge}
-                  </span>
-                ))}
+              <div className="mt-8 grid gap-3 text-xs text-slate-500 sm:grid-cols-2">
+                <div className="rounded-2xl border border-slate-200 p-3">COA-backed batches</div>
+                <div className="rounded-2xl border border-slate-200 p-3">HPLC + MS verification</div>
+                <div className="rounded-2xl border border-slate-200 p-3">Cold-chain dispatch</div>
+                <div className="rounded-2xl border border-slate-200 p-3">EU & UK delivery</div>
               </div>
               <p className="mt-6 text-xs text-slate-500">
                 For laboratory research only. Not for human or veterinary use.
@@ -90,65 +82,25 @@ export default function Home() {
                   <span>2–8°C recommended</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>Delivery</span>
-                  <span>UK & EU cold chain</span>
+                  <span>Documentation</span>
+                  <span>Batch COA + analysis</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="science" className="px-6 py-16">
-          <div className="mx-auto max-w-6xl">
-            <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
-              <div>
-                <h2 className="text-3xl font-semibold">What is Retatutride?</h2>
-                <p className="mt-4 text-slate-600">
-                  Retatutride is a next-generation investigational compound being studied for its
-                  multi-target receptor activity in metabolic research models. Laboratories are
-                  exploring its mechanisms across GLP-1, GIP, and glucagon pathways.
-                </p>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {[
-                  {
-                    title: "Multi-target research",
-                    text: "Studied for combined receptor activity supporting metabolic research pathways.",
-                  },
-                  {
-                    title: "Protocol-ready",
-                    text: "Supplied with documentation to support lab protocols and recordkeeping.",
-                  },
-                  {
-                    title: "Transparent sourcing",
-                    text: "Batch history and sourcing logs available upon request.",
-                  },
-                  {
-                    title: "Controlled distribution",
-                    text: "Strict chain-of-custody to ensure integrity from lab to lab.",
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-slate-200 p-6">
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="mt-3 text-sm text-slate-600">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="quality" className="px-6 py-16">
+        <section id="proof" className="px-6 py-16">
           <div className="mx-auto max-w-6xl rounded-3xl bg-slate-900 px-8 py-12 text-white">
             <h2 className="text-3xl font-semibold">Quality you can verify</h2>
             <p className="mt-4 text-slate-300">
-              Every batch includes COA documentation, analytical results, and purity validation
-              via HPLC and mass spectrometry.
+              Every batch is supported by analytical documentation and verified purity targets, with
+              transparent sourcing and traceable chain-of-custody.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {[
                 { value: "≥99%", label: "Target purity threshold" },
-                { value: "2x", label: "Independent analytical verification" },
+                { value: "2x", label: "Independent verification" },
                 { value: "24/7", label: "Cold-chain tracking" },
               ].map((stat) => (
                 <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -160,21 +112,37 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="order" className="px-6 py-16">
+        <section id="protocol" className="px-6 py-16">
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1.1fr_0.9fr]">
             <div>
-              <h2 className="text-3xl font-semibold">Order Retatutride</h2>
+              <h2 className="text-3xl font-semibold">A simple procurement flow</h2>
               <p className="mt-4 text-slate-600">
-                Choose your research quantity, request your COA, and receive secure cold-chain
-                delivery. For lab use only.
+                We keep ordering streamlined and compliance-first: request access, receive batch data,
+                and confirm your research requirements.
               </p>
-              <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                <li>• Transparent sourcing & batch IDs</li>
-                <li>• Secure payment options</li>
-                <li>• Dedicated researcher support</li>
-              </ul>
+              <div className="mt-6 grid gap-4">
+                {[
+                  {
+                    title: "1. Request access",
+                    text: "Tell us your lab details and required quantity.",
+                  },
+                  {
+                    title: "2. Review batch documentation",
+                    text: "We provide COA + analytical results for approval.",
+                  },
+                  {
+                    title: "3. Secure dispatch",
+                    text: "Cold-chain packaging with tracking and delivery updates.",
+                  },
+                ].map((step) => (
+                  <div key={step.title} className="rounded-2xl border border-slate-200 p-5">
+                    <h3 className="text-base font-semibold">{step.title}</h3>
+                    <p className="mt-2 text-sm text-slate-600">{step.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm" id="order">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-slate-500">Retatutride (research grade)</p>
@@ -191,7 +159,7 @@ export default function Home() {
                 </button>
               </div>
               <p className="mt-4 text-xs text-slate-500">
-                We supply for research use only. Minimum order quantities may apply.
+                For laboratory research only. Minimum order quantities may apply.
               </p>
             </div>
           </div>
