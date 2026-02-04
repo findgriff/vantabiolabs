@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Image src="/assets/logo.jpg" alt={BRAND} width={400} height={120} className="h-24 w-auto" />
+          <Image src="/assets/logo.jpg" alt={BRAND} width={600} height={180} className="h-32 w-auto" />
           <nav className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
             <a href="#overview" className="hover:text-blue-600">Overview</a>
             <a href="#evidence" className="hover:text-blue-600">Evidence</a>
