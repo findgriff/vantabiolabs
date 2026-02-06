@@ -1,0 +1,27 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M20 10 L60 110 L100 10"
+    stroke="#0f1f2b"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M50 25 C 70 35 70 55 50 65 C 30 75 30 95 50 105"
+    stroke="#0f8a8f"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M70 25 C 50 35 50 55 70 65 C 90 75 90 95 70 105"
+    stroke="#0f8a8f"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <line x1="54" y1="35" x2="66" y2="35" stroke="#c8964b" stroke-width="3" stroke-linecap="round" />
+  <line x1="54" y1="55" x2="66" y2="55" stroke="#c8964b" stroke-width="3" stroke-linecap="round" />
+  <line x1="54" y1="75" x2="66" y2="75" stroke="#c8964b" stroke-width="3" stroke-linecap="round" />
+  <line x1="54" y1="95" x2="66" y2="95" stroke="#c8964b" stroke-width="3" stroke-linecap="round" />
+</svg>

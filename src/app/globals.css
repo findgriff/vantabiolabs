@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7fbfd;
+  --foreground: #0f1c2e;
+  --muted: #4a5c6d;
+  --surface: #ffffff;
+  --surface-muted: #edf4f8;
+  --accent: #1b7ea6;
+  --accent-strong: #146a8e;
+  --accent-warm: #7bbf5a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0c1218;
+    --foreground: #f3f7fb;
+    --muted: #b2c0cc;
+    --surface: #121a23;
+    --surface-muted: #1a2530;
+    --accent: #2ea6d4;
+    --accent-strong: #1b7ea6;
+    --accent-warm: #90c879;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "IBM Plex Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.font-display {
+  font-family: var(--font-display), "Fraunces", serif;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.surface {
+  background: var(--surface);
+}
+
+.surface-muted {
+  background: var(--surface-muted);
+}
+
+.chip {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 31, 43, 0.18);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.8s ease forwards;
 }
