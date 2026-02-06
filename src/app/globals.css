@@ -3,7 +3,7 @@
 :root {
   --background: #f7fbfd;
   --foreground: #0f1c2e;
-  --muted: #4a5c6d;
+  --muted: #1f2c38;
   --surface: #ffffff;
   --surface-muted: #edf4f8;
   --accent: #1b7ea6;
@@ -50,6 +50,11 @@ section {
 
 .text-muted {
   color: var(--muted);
+}
+
+.bg-white {
+  --foreground: #0f1c2e;
+  --muted: #2c3a46;
 }
 
 .surface {
