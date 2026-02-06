@@ -215,15 +215,15 @@ export default function Home() {
               </p>
               <div className="mt-6 space-y-5 text-sm text-slate-700">
                 <div className="rounded-2xl border border-black/10 bg-white p-5">
-                  <p className="font-semibold text-[var(--foreground)]">Weeks 0–4</p>
+                  <p className="font-semibold text-slate-900">Weeks 0–4</p>
                   <p className="mt-2 text-slate-700">Low starting doses around 2–4 mg weekly.</p>
                 </div>
                 <div className="rounded-2xl border border-black/10 bg-white p-5">
-                  <p className="font-semibold text-[var(--foreground)]">Weeks 4–16</p>
+                  <p className="font-semibold text-slate-900">Weeks 4–16</p>
                   <p className="mt-2 text-slate-700">Gradual escalation to improve GI tolerability.</p>
                 </div>
                 <div className="rounded-2xl border border-black/10 bg-white p-5">
-                  <p className="font-semibold text-[var(--foreground)]">Target dosing</p>
+                  <p className="font-semibold text-slate-900">Target dosing</p>
                   <p className="mt-2 text-slate-700">Higher arms targeted 8–12 mg weekly.</p>
                 </div>
               </div>
