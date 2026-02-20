@@ -377,7 +377,7 @@ export default function Home() {
               </p>
               <div className="mt-6 flex flex-col gap-3">
                 <a
-                  href="mailto:info@aressentinel.com"
+                  href="mailto:vantabiolabs@gmail.com"
                   className="rounded-full bg-[var(--accent)] px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-[rgba(15,138,143,0.3)]"
                 >
                   Start order via email
@@ -398,7 +398,7 @@ export default function Home() {
             replace medical advice and should not be used to make treatment decisions.
           </p>
           <div className="mt-4 flex flex-col gap-1">
-            <span>Support: info@aressentinel.com</span>
+            <span>Support: vantabiolabs@gmail.com</span>
             <span>Information current as of February 2026.</span>
             <span>Stock imagery: Josiah Rock, Alexander Nedviga, Allison Saeng (Unsplash).</span>
           </div>
