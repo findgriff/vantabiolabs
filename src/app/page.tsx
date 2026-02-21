@@ -404,6 +404,24 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Telegram Floating Widget */}
+      <a
+        href="https://t.me/+72Med6TFJv8wNGFk"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center h-14 w-14 rounded-full bg-[#0088cc] text-white shadow-lg transition hover:bg-[#0077b3] hover:shadow-xl"
+        title="Message us on Telegram"
+      >
+        <svg
+          className="h-7 w-7"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295-.393 0-.32-.148-.451-.524l-1.004-3.296-2.952-.924c-.64-.203-.658-.64.135-.953l11.506-4.431c.53-.196 1.04.128.864.953z" />
+        </svg>
+      </a>
     </div>
   );
 }
